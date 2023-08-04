@@ -29,9 +29,14 @@ export const destinationSlice = createSlice({
   reducers: {
     destinationClicked: (state, action) => {
       state.destinationSelected = action.payload;
-      console.log(action);
+      
     },
+    resetDestination: (state) => {
+        state.destinationSelected = null;
+        console.log(state);
+      },
   },
 });
-export const { destinationClicked } = destinationSlice.actions;
+export const { destinationClicked, resetDestination } =
+  destinationSlice.actions;
 export const destinationReducer = destinationSlice.reducer;

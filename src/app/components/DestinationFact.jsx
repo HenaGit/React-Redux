@@ -6,10 +6,12 @@ function DestinationFact() {
     (state) => state.destinationStore.destinationSelected
   );
   if (selectedDestination == undefined) {
+    console.log("nothing");
     return (
       <div className="text-center pt-4 text-warning">Select a Destination</div>
     );
   } else {
+    console.log("something");
     return (
       <div className="text-center border p-3 m-3">
         <h4 className="text-success">{selectedDestination.name}</h4>
